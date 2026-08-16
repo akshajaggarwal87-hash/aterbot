@@ -20,6 +20,8 @@ const reconnect = async (): Promise<void> => {
 };
 
 const createBot = (): void => {
+	console.log(`Connecting to ${CONFIG.client.host}:${CONFIG.client.port} as ${CONFIG.client.username}...\n`);
+
 	bot = Mineflayer.createBot({
 		host: CONFIG.client.host,
 		port: +CONFIG.client.port,
